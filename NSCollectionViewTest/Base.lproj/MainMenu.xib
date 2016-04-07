@@ -687,6 +687,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="438" height="318"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <outlet property="itemPrototype" destination="W0M-8e-J8D" id="bM8-Bk-zzU"/>
+                                    </connections>
                                 </collectionView>
                             </subviews>
                         </clipView>
@@ -708,9 +711,10 @@
                 </constraints>
             </view>
         </window>
-        <collectionViewItem id="W0M-8e-J8D">
+        <collectionViewItem id="W0M-8e-J8D" customClass="BVPrototype">
             <connections>
                 <outlet property="imageView" destination="rko-GH-1Sa" id="ErR-xZ-bTy"/>
+                <outlet property="subTitleTextField" destination="y7m-Vd-6kp" id="q9s-Wh-WhH"/>
                 <outlet property="textField" destination="ouc-F6-M3m" id="Y4f-bp-gtz"/>
                 <outlet property="view" destination="68P-E1-NBL" id="3ru-XQ-FHP"/>
             </connections>
@@ -719,18 +723,26 @@
             <rect key="frame" x="0.0" y="0.0" width="149" height="126"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rko-GH-1Sa">
+                    <rect key="frame" x="47" y="55" width="54" height="54"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="IEg-KV-CfB"/>
+                </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouc-F6-M3m">
-                    <rect key="frame" x="56" y="20" width="37" height="17"/>
+                    <rect key="frame" x="56" y="33" width="37" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="kN8-rX-AWe">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rko-GH-1Sa">
-                    <rect key="frame" x="47" y="55" width="54" height="54"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="IEg-KV-CfB"/>
-                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y7m-Vd-6kp">
+                    <rect key="frame" x="7" y="14" width="134" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Subt" id="8Ja-uy-6Bb">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <point key="canvasLocation" x="281.5" y="699"/>
         </customView>
