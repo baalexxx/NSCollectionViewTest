@@ -15,12 +15,15 @@ static const NSPoint buttonOrigin = { 10, 10 };
 #pragma mark - BVView
 
 @interface BVView : NSView
+
 @property (weak) NSButton *button;
+
 @end
 
 @implementation BVView
 @synthesize button;
 - (id)initWithFrame:(NSRect)frameRect {
+    
     self = [super initWithFrame:(NSRect){frameRect.origin, itemSize}];
     if (self) {
         NSButton *newButton = [[NSButton alloc]
@@ -64,22 +67,8 @@ static const NSPoint buttonOrigin = { 10, 10 };
     
     self.titles = @[@"Case", @"Molly", @"Armitage", @"Hideo", @"The Finn", @"Maelcum", @"Wintermute", @"Neuromancer"];
     
-//    NSCollectionView *cv = [[NSCollectionView alloc]
-//                            initWithFrame:[[[self window] contentView] frame]];
-    
-    
     [self.collectionView setItemPrototype:[BVPrototype new]];
     [self.collectionView setContent:[self titles]];
-    
-//    [self.collectionView setAutoresizingMask:(NSViewMinXMargin
-//                             | NSViewWidthSizable
-//                             | NSViewMaxXMargin
-//                             | NSViewMinYMargin
-//                             | NSViewHeightSizable
-//                             | NSViewMaxYMargin)];
-    
-    //[[[self window] contentView] addSubview:cv];
-    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
