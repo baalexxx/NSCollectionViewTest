@@ -683,10 +683,11 @@
                             <rect key="frame" x="1" y="1" width="438" height="318"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <collectionView id="Mh8-Uz-7gN">
+                                <collectionView maxNumberOfRows="1" id="Mh8-Uz-7gN">
                                     <rect key="frame" x="0.0" y="0.0" width="438" height="318"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="secondaryBackgroundColor" name="controlAlternatingRowColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
                                         <outlet property="itemPrototype" destination="W0M-8e-J8D" id="bM8-Bk-zzU"/>
                                     </connections>
@@ -714,13 +715,12 @@
         <collectionViewItem id="W0M-8e-J8D" customClass="BVPrototype">
             <connections>
                 <outlet property="imageView" destination="rko-GH-1Sa" id="ErR-xZ-bTy"/>
-                <outlet property="subTitleTextField" destination="y7m-Vd-6kp" id="q9s-Wh-WhH"/>
                 <outlet property="textField" destination="ouc-F6-M3m" id="Y4f-bp-gtz"/>
                 <outlet property="view" destination="68P-E1-NBL" id="3ru-XQ-FHP"/>
             </connections>
         </collectionViewItem>
         <customView id="68P-E1-NBL">
-            <rect key="frame" x="0.0" y="0.0" width="149" height="126"/>
+            <rect key="frame" x="0.0" y="0.0" width="118" height="126"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rko-GH-1Sa">
@@ -744,7 +744,7 @@
                     </textFieldCell>
                 </textField>
             </subviews>
-            <point key="canvasLocation" x="281.5" y="699"/>
+            <point key="canvasLocation" x="177" y="661"/>
         </customView>
     </objects>
 </document>

@@ -39,51 +39,20 @@
 
 @interface BVPrototype : NSCollectionViewItem
 
-@property (strong) IBOutlet NSTextField* subTitleTextField;
-
 @end
 
 @implementation BVPrototype
 
-//- (void) awakeFromNib {
-//    
-//    NSLog(@"test");
-//    
-//}
-
-- (void)loadView {
-    
-    NSLog(@"test");
-    self.subTitleTextField.stringValue = @"AAAAA";
-}
-
-
-- (void) setView:(NSView *)view {
-    
-    [super setView:view];
-    
-    self.subTitleTextField.stringValue = @"QQQ";
-    if (self.representedObject)
-        self.subTitleTextField.stringValue = self.representedObject;
-}
-
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-//    [[(BVView *)[self view] button] setTitle:representedObject];
-    
-    //self.textField.stringValue = representedObject;
-    
-//    NSLog([representedObject description]);
-//    
-//    NSLog([self.imageView description]);
-    
     
     if (representedObject) {
+        
         self.textField.stringValue = representedObject;
+        self.imageView.image = [NSImage imageNamed:@"NSHomeTemplate"];
         
-        self.subTitleTextField.stringValue = representedObject;
-        
-        self.subTitleTextField.stringValue = @"QQQ";
+        NSTextField* tField = (NSTextField*)[[self.view subviews] lastObject];
+        tField.stringValue = @"Test";
     }
     
 }
@@ -94,9 +63,7 @@
 @interface AppDelegate ()
 
 @property (strong) NSArray *titles;
-
 @property (weak) IBOutlet NSCollectionView *collectionView;
-
 @property (weak) IBOutlet NSWindow *window;
 
 @end
