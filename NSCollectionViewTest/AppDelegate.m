@@ -8,37 +8,9 @@
 
 #import "AppDelegate.h"
 
-//static const NSSize buttonSize = { 80, 35 };
-//static const NSSize itemSize = { 100, 100 };
-//static const NSPoint buttonOrigin = { 10, 10 };
-
-#pragma mark - BVView
-
-//@interface BVView : NSView
-//
-//@property (weak) NSButton *button;
-//
-//@end
-//
-//@implementation BVView
-//@synthesize button;
-//- (id)initWithFrame:(NSRect)frameRect {
-//    
-//    self = [super initWithFrame:(NSRect){frameRect.origin, itemSize}];
-//    if (self) {
-//        NSButton *newButton = [[NSButton alloc]
-//                               initWithFrame:(NSRect){buttonOrigin, buttonSize}];
-//        [self addSubview:newButton];
-//        self.button = newButton;
-//    }
-//    return self;
-//}
-//@end
-
 #pragma mark - BVPrototype
 
 @interface BVPrototype : NSCollectionViewItem
-
 @end
 
 @implementation BVPrototype
